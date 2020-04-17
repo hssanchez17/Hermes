@@ -23,16 +23,66 @@
 		</div>
 
 		<div class="proyecto-1">
-			<h1>Dela Cream</h1>
+			
+
+			<div class="lado frente">
+				<h1>Dela Cream</h1>
+				<div class="tecnologias">
+					<h2>VueJs</h2>
+					<h2>NodeJs</h2>
+					<h2>PostgresSQL</h2>
+				</div>
+			</div>
+
+
+			<div class="lado atras">
+				<h1>Info</h1>
+				<p class="info">
+					Dela cream es una heladeria virtual en la cual se pueden comprar y vender helados al publico general.
+				</p>
+				
+			</div>
 		</div>
 
 		<div class="proyecto-2">
-			<h1>Red Social</h1>
+						<div class="lado frente">
+				<h1>Dela Cream</h1>
+				<div class="tecnologias">
+					<h2>VueJs</h2>
+					<h2>NodeJs</h2>
+					<h2>PostgresSQL</h2>
+				</div>
+			</div>
+
+
+			<div class="lado atras">
+				<h1>Info</h1>
+				<p class="info">
+					Dela cream es una heladeria virtual en la cual se pueden comprar y vender helados al publico general.
+				</p>
+				
+			</div>
 			
 		</div>
 
 		<div class="proyecto-3">
-			
+						<div class="lado frente">
+				<h1>Dela Cream</h1>
+				<div class="tecnologias">
+					<h2>VueJs</h2>
+					<h2>NodeJs</h2>
+					<h2>PostgresSQL</h2>
+				</div>
+			</div>
+
+
+			<div class="lado atras">
+				<h1>Info</h1>
+				<p class="info">
+					Dela cream es una heladeria virtual en la cual se pueden comprar y vender helados al publico general.
+				</p>
+				
+			</div>
 		</div>
 	
 	</div>
@@ -55,6 +105,7 @@ body {
 }
 
 .contenedor{
+	-webkit-perspective:1000;
 	width: 90%;
 	max-width: 1000px;
 	margin: 20px auto;
@@ -62,10 +113,11 @@ body {
 	grid-gap: 20px;
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: repeat(2, auto);
-	grid-template-areas: "header 		header 			header"
-						 "header 		header 			header"
+	grid-template-areas: "header 			header 			header"
+						 "header 			header 			header"
 						 "contenido 		contenido 		contenido"
 						 "contenido 		contenido 		contenido"
+						 "proyecto-1        proyecto-2      proyecto-3"
 
 }
 
@@ -106,7 +158,52 @@ body {
 	grid-area: contenido;
 }
 
+.contenedor .proyecto-1,
+.contenedor .proyecto-2,
+.contenedor .proyecto-3{
+	background: #55a8fd;
+	color: #fff;
+	height: 300px;
+	position: relative;
+	transform-style: preserve-3d;
+	transition: 1.5s;
+}
 
+.contenedor .proyecto-1{
+	grid-area: proyecto-1;
+}
+
+.contenedor .proyecto-2{
+	grid-area: proyecto-2;
+}
+
+.contenedor .proyecto-3{
+	grid-area: proyecto-3;
+}
+
+
+.contenedor .proyecto-1:hover,.contenedor .proyecto-2:hover,.contenedor .proyecto-3:hover{
+	transform: rotateY(180deg);
+}
+
+.lado{
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+	position: absolute;
+	display: flex;
+	flex-direction:column;
+	align-items:center;
+}
+
+.frente{
+	background: crimson;
+}
+
+.atras{
+	background: green;
+	transform: rotateY(180deg);
+}
 
 
 
