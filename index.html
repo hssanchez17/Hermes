@@ -16,75 +16,107 @@
 			<h1>About ME</h1>
 			<h3>Tener un excelente proceso para tener excelentes resultados</h3>
 			<p>	
-				Apacionado por la programacion y por el proceso de desarrollo de software. 
+				Apasionado por la programacion y por el proceso de desarrollo de software. 
 				Siempre ansioso por aprender y trabajar eficientemete. Algunos de mis pasatiempos es programar por diversion en proyectos personales y participar en competencias de programacion.
 			</p>
 		</div>
 
-		<h1>Proyectos</h1>
-
-		<div class="proyecto-1">
+		<div class="proyectos">
+			<h1 class="title">Proyectos De Portafolio</h1>
+			
+			<div class="proyecto-1">
 			
 
-			<div class="lado frente">
+				<div class="lado frente">
+					<h1>Dela Cream</h1>
+					<div class="tecnologias">
+						<h2>VueJs</h2>
+						<h2>NodeJs</h2>
+						<h2>PostgresSQL</h2>
+					</div>
+				</div>
+
+
+				<div class="lado atras">
+					<h1>Info</h1>
+					<p class="info">
+						Dela cream es una heladeria virtual en la cual se pueden comprar y vender helados al publico general.
+					</p>
+
+					<button onclick="location.href='https://github.com/hssanchez17/Ecommerce'">Llévame a otro lado</button>
+					
+				</div>
+			</div>
+
+			<div class="proyecto-2">
+				<div class="lado frente">
 				<h1>Dela Cream</h1>
 				<div class="tecnologias">
 					<h2>VueJs</h2>
 					<h2>NodeJs</h2>
 					<h2>PostgresSQL</h2>
 				</div>
+				</div>
+
+
+				<div class="lado atras">
+					<h1>Info</h1>
+					<p class="info">
+						Dela cream es una heladeria virtual en la cual se pueden comprar y vender helados al publico general.
+					</p>			
+				</div>		
 			</div>
 
+			<div class="proyecto-3">
+				<div class="lado frente">
+					<h1>Dela Cream</h1>
+					<div class="tecnologias">
+						<h2>VueJs</h2>
+						<h2>NodeJs</h2>
+						<h2>PostgresSQL</h2>
+					</div>
+				</div>
 
-			<div class="lado atras">
-				<h1>Info</h1>
-				<p class="info">
-					Dela cream es una heladeria virtual en la cual se pueden comprar y vender helados al publico general.
-				</p>
 
-				<button onclick="location.href='https://github.com/hssanchez17/Ecommerce'">Llévame a otro lado</button>
-				
-			</div>
-		</div>
-
-		<div class="proyecto-2">
-			<div class="lado frente">
-				<h1>Dela Cream</h1>
-				<div class="tecnologias">
-					<h2>VueJs</h2>
-					<h2>NodeJs</h2>
-					<h2>PostgresSQL</h2>
+				<div class="lado atras">
+					<h1>Info</h1>
+					<p class="info">
+						Dela cream es una heladeria virtual en la cual se pueden comprar y vender helados al publico general.
+					</p>		
 				</div>
 			</div>
-
-
-			<div class="lado atras">
-				<h1>Info</h1>
-				<p class="info">
-					Dela cream es una heladeria virtual en la cual se pueden comprar y vender helados al publico general.
-				</p>			
-			</div>		
 		</div>
 
-		<div class="proyecto-3">
-			<div class="lado frente">
-				<h1>Dela Cream</h1>
-				<div class="tecnologias">
-					<h2>VueJs</h2>
-					<h2>NodeJs</h2>
-					<h2>PostgresSQL</h2>
-				</div>
-			</div>
+		<div class="tecnologias">
 
+			<h1 class="title-tec">Tecnologias</h1>
 
-			<div class="lado atras">
-				<h1>Info</h1>
-				<p class="info">
-					Dela cream es una heladeria virtual en la cual se pueden comprar y vender helados al publico general.
-				</p>
-				
-			</div>
+			<div class="front">
+	            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTbzA3kf72FmaaEWxUKAiOYHHe3a8hWGHdTRM9pVuLDwNTSHQ8r&usqp=CAU">
+	            <h4>Front End</h4>
+	            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, excepturi unde?</p>
+	            <a href="#">Leer más</a>
+        	</div>
+        
+	        <div class="back">
+	            <img src="https://anthoncode.com/wp-content/uploads/2019/05/front-end-y-back-end.jpg">
+	            <h4>Comida</h4>
+	            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, excepturi unde?</p>
+	            <a href="#">Leer más</a>
+	        </div>
+	        
+	        <div class="db">
+	            <img src="https://cdn1.padigital.es/plds/articulos/5-requisitos-que-debe-tener-tu-base-de-datos-para-que-sea-efectiva.jpg">
+	            <h4>Tecnología</h4>
+	            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, excepturi unde?</p>
+	            <a href="#">Leer más</a>
+	        </div>	
 		</div>
+
+		<footer class="footer">
+			<h1>FOOTER</h1>
+			
+		</footer>
 	
 	</div>
 
@@ -101,7 +133,7 @@
 
 body {
 	background:black;
-	color: #000;
+	color: #fff;
 	font-family: 'Roboto', sans-serif;
 }
 
@@ -113,13 +145,12 @@ body {
 	display: grid;
 	grid-gap: 20px;
 	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: repeat(2, auto);
+	grid-template-rows: repeat(5, auto);
 	grid-template-areas: "header 			header 			header"
-						 "header 			header 			header"
 						 "contenido 		contenido 		contenido"
-						 "contenido 		contenido 		contenido"
-						 "proyecto-1        proyecto-2      proyecto-3"
-
+						 "proyectos        	proyectos      	proyectos"
+						 "tecnologias       tecnologias      tecnologias"
+						 "footer  			footer 		 	footer"
 }
 
 .contenedor header{
@@ -159,9 +190,30 @@ body {
 	grid-area: contenido;
 }
 
-.contenedor .proyecto-1,
-.contenedor .proyecto-2,
-.contenedor .proyecto-3{
+.contenedor .proyectos{
+	grid-area: proyectos;
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, auto);
+	grid-template-areas:"title              title               title" 
+						"proyecto-1        	proyecto-2      	proyecto-3"
+
+}
+
+.contenedor .proyectos .title{
+	display: flex;
+	flex-direction:column;
+	align-items:center;
+	background: aqua;
+
+	color: white;
+	grid-area: title;
+}
+
+.contenedor .proyectos .proyecto-1,
+.contenedor .proyectos .proyecto-2,
+.contenedor .proyectos .proyecto-3{
 	background: #55a8fd;
 	color: #fff;
 	height: 300px;
@@ -170,20 +222,22 @@ body {
 	transition: 1.5s;
 }
 
-.contenedor .proyecto-1{
+.contenedor .proyectos .proyecto-1{
 	grid-area: proyecto-1;
 }
 
-.contenedor .proyecto-2{
+.contenedor .proyectos .proyecto-2{
 	grid-area: proyecto-2;
 }
 
-.contenedor .proyecto-3{
+.contenedor .proyectos .proyecto-3{
 	grid-area: proyecto-3;
 }
 
 
-.contenedor .proyecto-1:hover,.contenedor .proyecto-2:hover,.contenedor .proyecto-3:hover{
+.contenedor .proyectos .proyecto-1:hover,
+.contenedor .proyectos .proyecto-2:hover,
+.contenedor .proyectos  .proyecto-3:hover{
 	transform: rotateY(180deg);
 }
 
@@ -202,7 +256,10 @@ body {
 	margin-bottom: 10%;
 }
 
-.lado .tecnologias{
+
+.contenedor .proyectos .proyecto-1 .lado .tecnologias,
+.contenedor .proyectos .proyecto-2 .lado .tecnologias,
+.contenedor .proyectos .proyecto-3 .lado .tecnologias{
 	
 	display: flex;
 	flex-direction:column;
@@ -219,6 +276,109 @@ body {
 	transform: rotateY(180deg);
 }
 
+.contenedor .tecnologias{
+	grid-area: tecnologias;
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, auto);
+	grid-template-areas:"title-tec              title-tec               title-tec" 
+						"front       		back     			db";
+
+	
+}
+
+.contenedor .tecnologias .title-tec{
+	display: flex;
+	flex-direction:column;
+	align-items:center;
+	background: aqua;
+
+	color: white;
+	grid-area: title;
+
+}
+
+
+
+.contenedor .tecnologias .title-tec{
+	grid-area: title-tec;
+}
+
+.contenedor .tecnologias .front{
+	grid-area: front;
+}
+.contenedor .tecnologias .back{
+	grid-area:back;
+}
+
+.contenedor .tecnologias .db{
+	grid-area: db;
+}
+
+.contenedor .tecnologias .front,
+.contenedor .tecnologias .back,
+.contenedor .tecnologias .db{	
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+  
+    text-align: center;
+    transition: all 0.25s;
+    background: green;
+}
+
+.contenedor .tecnologias .front:hover,
+.contenedor .tecnologias .back:hover,
+.contenedor .tecnologias .db:hover
+{
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.contenedor .tecnologias .front img,
+.contenedor .tecnologias .back img,
+.contenedor .tecnologias .db img{
+    width: 100%;
+    height: 220px;
+}
+
+
+.contenedor .tecnologias .front h4,
+.contenedor .tecnologias .back h4,
+.contenedor .tecnologias .db  h4{
+    font-weight: 600;
+}
+
+.contenedor .tecnologias .front p,
+.contenedor .tecnologias .back p,
+.contenedor .tecnologias .db  p{
+    padding: 0 1rem;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.contenedor .tecnologias .front a,
+.contenedor .tecnologias .back a,
+.contenedor .tecnologias .db  a {
+    font-weight: 500;
+    text-decoration: none;
+    color: #3498db;
+}
+
+
+.contenedor .footer {
+	display: flex;
+	flex-direction:column;
+	align-items:center;
+	background: aqua;
+
+	color: white;
+	grid-area: title;
+
+	grid-area: footer;
+}
 
 
 	/*.body{
