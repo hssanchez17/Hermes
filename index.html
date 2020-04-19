@@ -8,10 +8,9 @@
 	<div class="contenedor">
 		<header>
 			<h1>Hermes Sanchez</h1>
+			<h2>Programador Web</h2>
 		</header>
-	
-
-
+		
 		<div class="contenido">
 			<h1>About ME</h1>
 			<h3>Tener un excelente proceso para tener excelentes resultados</h3>
@@ -38,33 +37,40 @@
 
 
 				<div class="lado atras">
-					<h1>Info</h1>
-					<p class="info">
-						Dela cream es una heladeria virtual en la cual se pueden comprar y vender helados al publico general.
-					</p>
+					<div class="info">
+						<p>
+							Dela cream es una heladeria virtual en la cual se pueden comprar y vender helados al publico general.
+						</p>
 
-					<button onclick="location.href='https://github.com/hssanchez17/Ecommerce'">Llévame a otro lado</button>
+						<button class="button button2">Código fuente</button>
+					</div>
+					
 					
 				</div>
 			</div>
 
 			<div class="proyecto-2">
 				<div class="lado frente">
-				<h1>Dela Cream</h1>
-				<div class="tecnologias">
-					<h2>VueJs</h2>
-					<h2>NodeJs</h2>
-					<h2>PostgresSQL</h2>
-				</div>
+					<h1>Dela Cream</h1>
+					<div class="tecnologias">
+						<h2>VueJs</h2>
+						<h2>NodeJs</h2>
+						<h2>PostgresSQL</h2>
+					</div>
 				</div>
 
 
 				<div class="lado atras">
-					<h1>Info</h1>
-					<p class="info">
+					<div class="info">
+						<p>
 						Dela cream es una heladeria virtual en la cual se pueden comprar y vender helados al publico general.
-					</p>			
-				</div>		
+					</p>
+
+					<button onclick="location.href='https://github.com/hssanchez17/Ecommerce'">Llévame a otro lado</button>
+					</div>
+					
+					
+				</div>
 			</div>
 
 			<div class="proyecto-3">
@@ -79,12 +85,19 @@
 
 
 				<div class="lado atras">
-					<h1>Info</h1>
-					<p class="info">
+					<div class="info">
+						<p>
 						Dela cream es una heladeria virtual en la cual se pueden comprar y vender helados al publico general.
-					</p>		
+					</p>
+
+					<button onclick="location.href='https://github.com/hssanchez17/Ecommerce'">Llévame a otro lado</button>
+					</div>
+					
+					
 				</div>
 			</div>
+		
+
 		</div>
 
 		<div class="tecnologias">
@@ -123,7 +136,6 @@
 
 		<footer class="footer">
 			<h1>FOOTER</h1>
-			
 		</footer>
 	
 	</div>
@@ -140,8 +152,7 @@
 }
 
 body {
-	background:black;
-	color: #fff;
+	background: #E9ECF4;
 	font-family: 'Roboto', sans-serif;
 }
 
@@ -170,10 +181,9 @@ body {
 	position: relative;
 	grid-area: header;
 	display: flex;
+	flex-direction:column;
 	justify-content: center;
 	align-items: center;
-		
-
 }
 
 .contenedor header:before{
@@ -187,14 +197,14 @@ body {
  }
 
 
-.contenedor header h1{
+.contenedor header h1,.contenedor header h2{
 		color:white;
 		font-family: sans-serif;
 		z-index: 1;
 }
 
 .contenedor .contenido{
-	color: white;
+	color: gray;
 	grid-area: contenido;
 }
 
@@ -213,16 +223,13 @@ body {
 	display: flex;
 	flex-direction:column;
 	align-items:center;
-	background: aqua;
-
-	color: white;
+	color: #7A7979;
 	grid-area: title;
 }
 
 .contenedor .proyectos .proyecto-1,
 .contenedor .proyectos .proyecto-2,
 .contenedor .proyectos .proyecto-3{
-	background: #55a8fd;
 	color: #fff;
 	height: 300px;
 	position: relative;
@@ -260,15 +267,22 @@ body {
 }
 
 .lado h1{
-	margin-top: 10px;
 	margin-bottom: 10%;
+	color:white;
+	background: #009AEC;
+	width: 100%;
+	height: 30%;
+	display: flex;
+	justify-content: center;
+	align-items:center;
+
 }
 
 
 .contenedor .proyectos .proyecto-1 .lado .tecnologias,
 .contenedor .proyectos .proyecto-2 .lado .tecnologias,
 .contenedor .proyectos .proyecto-3 .lado .tecnologias{
-	
+	color:#7A7979;
 	display: flex;
 	flex-direction:column;
 	align-items:center;
@@ -276,15 +290,27 @@ body {
 }
 
 .frente{
-	background: crimson;
+	background: white;
 }
 
 .atras{
-	background: green;
 	transform: rotateY(180deg);
+	background:linear-gradient(90deg,#52c4df,#ad55c1);
+
+}
+
+.atras .info{
+	font-size: 20px;
+	height: 100%;
+	padding: 20px;
+	display: flex;
+	flex-direction:column;
+	align-items:center;
+	justify-content: center;
 }
 
 .contenedor .tecnologias{
+
 	grid-area: tecnologias;
 	display: grid;
 	grid-gap: 20px;
@@ -300,14 +326,11 @@ body {
 	display: flex;
 	flex-direction:column;
 	align-items:center;
-	background: aqua;
 
-	color: white;
+	color: #7A7979;
 	grid-area: title;
 
 }
-
-
 
 .contenedor .tecnologias .title-tec{
 	grid-area: title-tec;
@@ -343,7 +366,8 @@ body {
   
     text-align: center;
     transition: all 0.25s;
-    background: green;
+    background: white;
+    color: #7A7979;
 }
 
 .contenedor .tecnologias .front:hover,
@@ -362,27 +386,8 @@ body {
 }
 
 
-.contenedor .tecnologias .front h4,
-.contenedor .tecnologias .back h4,
-.contenedor .tecnologias .db  h4{
-    font-weight: 600;
-}
 
-.contenedor .tecnologias .front p,
-.contenedor .tecnologias .back p,
-.contenedor .tecnologias .db  p{
-    padding: 0 1rem;
-    font-size: 16px;
-    font-weight: 300;
-}
 
-.contenedor .tecnologias .front a,
-.contenedor .tecnologias .back a,
-.contenedor .tecnologias .db  a {
-    font-weight: 500;
-    text-decoration: none;
-    color: #3498db;
-}
 
 
 .contenedor .footer {
@@ -427,4 +432,34 @@ body {
 		color:white;
 		font-family: sans-serif;
 	}*/
+
+
+
+.button {
+
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+
+.button2 {
+  background-color:#008CBA; 
+  color: white; 
+  border: 2px solid white;
+}
+
+.button2:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid #008CBA;
+}
+}
 </style>
