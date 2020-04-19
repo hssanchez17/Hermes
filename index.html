@@ -12,13 +12,25 @@
 		</header>
 		
 		<div class="contenido">
-			<h1>About ME</h1>
-			<h3>Tener un excelente proceso para tener excelentes resultados</h3>
+			<h1>Acerca de Mi</h1>
+			<!--<h3>Tener un excelente proceso para tener excelentes resultados</h3>!-->
+			<p>	
+				Apasionado por la programacion y por el proceso de desarrollo de software. 
+				Siempre ansioso por aprender y trabajar eficientemete. Algunos de mis pasatiempos es programar por diversion en proyectos personales y participar en competencias de programacion.
+			</p>
+
+			<br>
+
 			<p>	
 				Apasionado por la programacion y por el proceso de desarrollo de software. 
 				Siempre ansioso por aprender y trabajar eficientemete. Algunos de mis pasatiempos es programar por diversion en proyectos personales y participar en competencias de programacion.
 			</p>
 		</div>
+
+		<div class="img-hermes">
+			<img src="hermes-sanchez.jpg">
+		</div>
+
 
 		<div class="proyectos">
 			<h1 class="title">Proyectos De Portafolio</h1>
@@ -134,9 +146,15 @@
 	        </div>	
 		</div>
 
-		<footer class="footer">
-			<h1>FOOTER</h1>
-		</footer>
+			<footer class="footer">
+  				<div class="rounded-social-buttons">
+                    <a class="social-button facebook" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a class="social-button github" href="https://www.github.com/" target="_blank"><i class="fab fa-github"></i></a>
+                    <a class="social-button linkedin" href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a class="social-button youtube" href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a class="social-button instagram" href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+</footer>
 	
 	</div>
 
@@ -166,11 +184,14 @@ body {
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: repeat(5, auto);
 	grid-template-areas: "header 			header 			header"
-						 "contenido 		contenido 		contenido"
+						 "contenido 		contenido 		img-hermes"
 						 "proyectos        	proyectos      	proyectos"
 						 "tecnologias       tecnologias      tecnologias"
 						 "footer  			footer 		 	footer"
 }
+
+
+
 
 .contenedor header{
 	width:100%;
@@ -206,8 +227,17 @@ body {
 .contenedor .contenido{
 	color: gray;
 	grid-area: contenido;
+	font-size: 22px;
 }
 
+.contenedor .img-hermes{
+	grid-area: img-hermes;
+}
+
+.contenedor .img-hermes img{
+	width: 100%;
+	height: 350px;
+}
 .contenedor .proyectos{
 	grid-area: proyectos;
 	display: grid;
@@ -348,7 +378,9 @@ body {
 }
 
 
-.contenedor .tecnologias h2{
+.contenedor .tecnologias .front h2,
+.contenedor .tecnologias .back h2,
+.contenedor .tecnologias .db h2{
 	margin-bottom: 10px;
 }
 
@@ -359,7 +391,8 @@ body {
 .contenedor .tecnologias .front,
 .contenedor .tecnologias .back,
 .contenedor .tecnologias .db{	
-    height: auto;
+
+
     border-radius: 8px;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
     overflow: hidden;
@@ -381,6 +414,7 @@ body {
 .contenedor .tecnologias .front img,
 .contenedor .tecnologias .back img,
 .contenedor .tecnologias .db img{
+
     width: 100%;
     height: 220px;
 }
@@ -394,7 +428,6 @@ body {
 	display: flex;
 	flex-direction:column;
 	align-items:center;
-	background: aqua;
 
 	color: white;
 	grid-area: title;
@@ -461,5 +494,98 @@ body {
   color: black;
   border: 2px solid #008CBA;
 }
+
+
+
+
+.svg-inline--fa {
+  vertical-align: -0.200em;
 }
+
+.rounded-social-buttons {
+  text-align: center;
+}
+
+.rounded-social-buttons .social-button {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  width: 3.125rem;
+  height: 3.125rem;
+  border: 0.125rem solid transparent;
+  padding: 0;
+  text-decoration: none;
+  text-align: center;
+  color: #fefefe;
+  font-size: 1.5625rem;
+  font-weight: normal;
+  line-height: 2em;
+  border-radius: 1.6875rem;
+  transition: all 0.5s ease;
+  margin-right: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.rounded-social-buttons .social-button:hover, .rounded-social-buttons .social-button:focus {
+  -webkit-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.rounded-social-buttons .fa-github, .fa-facebook-f, .fa-linkedin, .fa-youtube, .fa-instagram {
+  font-size: 25px;
+}
+
+.rounded-social-buttons .social-button.facebook {
+  background: #3b5998;
+}
+
+.rounded-social-buttons .social-button.facebook:hover, .rounded-social-buttons .social-button.facebook:focus {
+  color: #3b5998;
+  background: #fefefe;
+  border-color: #3b5998;
+}
+
+.rounded-social-buttons .social-button.github{
+  background: black;
+}
+
+.rounded-social-buttons .social-button.github:hover, .rounded-social-buttons .social-button.github:focus {
+  color: black;
+  background: white;
+  border-color: black;
+}
+
+.rounded-social-buttons .social-button.linkedin {
+  background: #007bb5;
+}
+
+.rounded-social-buttons .social-button.linkedin:hover, .rounded-social-buttons .social-button.linkedin:focus {
+  color: #007bb5;
+  background: #fefefe;
+  border-color: #007bb5;
+}
+
+.rounded-social-buttons .social-button.youtube {
+  background: #bb0000;
+}
+
+.rounded-social-buttons .social-button.youtube:hover, .rounded-social-buttons .social-button.youtube:focus {
+  color: #bb0000;
+  background: #fefefe;
+  border-color: #bb0000;
+}
+
+.rounded-social-buttons .social-button.instagram {
+  background: #125688;
+}
+
+.rounded-social-buttons .social-button.instagram:hover, .rounded-social-buttons .social-button.instagram:focus {
+  color: #125688;
+  background: #fefefe;
+  border-color: #125688;
+}
+
 </style>
+
+<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
