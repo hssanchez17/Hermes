@@ -143,11 +143,12 @@
 		</div>
 
 		<footer class="footer">
-				<div class="info">
+				<div class="info">				<div class="curriculum">
+					<p>Curriculum</p>
+				</div>
+									<div class="info">
 					<p>Email: Hermessamuel10@hotmail.com</p>
 				</div>
-				<div class="curriculum">
-					<p>Curriculum</p>
 				</div>
   				<div class="rounded-social-buttons">
                     <!--<a class="social-button facebook" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>-->
@@ -519,15 +520,18 @@ body {
 }
 
 .rounded-social-buttons {
-
   text-align: center;
 }
 
-.footer .info, .footer .curriculum{
-  text-align: center;
-  display:flex;
+.footer .info{
+ display:flex;
   flex-direction:column;
-  justify-content:flex-end;
+   justify-content:flex-end;
+   align-items:flex-start;
+}
+
+.footer .info .info, .footer .info .curriculum{
+  text-align: center;
   font-size: 20px;
   color: black;
 }
@@ -612,6 +616,34 @@ body {
   color: #125688;
   background: #fefefe;
   border-color: #125688;
+}
+
+@media screen and (max-width: 768px){
+	.contenedor {
+		grid-template-areas: "header header header"
+						 	 "contenido contenido contenido"
+						 	 "proyectos        	proyectos      	proyectos"
+						 	 "tecnologias       tecnologias      tecnologias"				 
+						 	 "footer  			footer 		 	footer";
+
+	}
+
+	.contenedor .tecnologias{
+		grid-template-areas:"title-tec              title-tec               title-tec" 
+						 	"front       		front     			front"
+						 	"back       		back     			back"
+						 	"db       		db     			db";
+
+	
+	}
+
+	.contenedor .proyectos{
+		grid-template-areas:"title              title               title" 
+							"proyecto-1        	proyecto-1      	proyecto-1"
+							"proyecto-2        	proyecto-2      	proyecto-2"
+							"proyecto-3        	proyecto-3      	proyecto-3";
+
+}
 }
 
 </style>
